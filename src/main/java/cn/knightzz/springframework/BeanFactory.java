@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class BeanFactory {
 
-
     private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
     public Object getBean(String name) {
