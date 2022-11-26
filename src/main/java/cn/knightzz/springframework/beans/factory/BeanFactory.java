@@ -1,4 +1,6 @@
-package cn.knightzz.springframework;
+package cn.knightzz.springframework.beans.factory;
+
+import cn.knightzz.springframework.beans.factory.config.BeanDefinition;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,17 +14,6 @@ import java.util.Map;
  * @github <a href="https://github.com/knightzz1998">https://github.com/knightzz1998</a>
  * @create: 2022-11-21 19:41
  */
-public class BeanFactory {
-
-    private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
-
-    public Object getBean(String name) {
-        return beanDefinitionMap.get(name).getBean();
-    }
-
-    // 注册
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
-        beanDefinitionMap.put(name, beanDefinition);
-    }
-
+public interface BeanFactory {
+    public Object getBean(String name);
 }
